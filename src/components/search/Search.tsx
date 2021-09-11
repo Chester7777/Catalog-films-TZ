@@ -5,6 +5,7 @@ import {faTimesCircle} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {IsearchState} from './types/IsearchState';
 import styles from './styles/search.module.scss';
+import {EMPTY_STRING} from 'src/constants';
 
 //Example class component
 class Search extends React.Component<IsearchProps, IsearchState> {

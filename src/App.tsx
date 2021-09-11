@@ -4,12 +4,13 @@ import Search from './components/search/Search';
 import axios from 'axios';
 import {CounterResults, DropDownMenu, Films, Loading, Paginator} from './components';
 import {FilmType, GetDataType} from './types';
+import { EMPTY_STRING, True } from './constants';
 
-// const EMPTY_STRING = "";
+
 
 export const App: FC = memo((): ReactElement | null => {
-  const [error, setError] = useState<string>("");
-  const [search, setSearch] = useState<string>("");
+  const [error, setError] = useState<string>(EMPTY_STRING);
+  const [search, setSearch] = useState<string>(EMPTY_STRING);
   const [spinner, setSpinner] = useState<boolean>(false);
   const [films, setFilms] = useState<Array<FilmType>>([]);
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -17,7 +18,6 @@ export const App: FC = memo((): ReactElement | null => {
 
   const changePage = (page: number): Promise<void> => fetchMovies(search, page);
 
-  // useCallback [searchText, currentPage, fetchMovies]
   const getMove = (searchText: string): void => {
     setSearch(searchText);
 
@@ -37,11 +37,11 @@ export const App: FC = memo((): ReactElement | null => {
 
       const {Search, totalResults, Response, Error} = response.data;
 
-      if (Response === "True") {
+      if (Response === True) {
         setFilms(Search);
         setTotalResults(totalResults);
         setCurrentPage(currentPage);
-        setError('');
+        setError(EMPTY_STRING);
       } else {
         setError(`Error in request : ${Error}`);
       }
@@ -63,13 +63,14 @@ export const App: FC = memo((): ReactElement | null => {
 
     return (
       <div className="container">
-        {spinner ? <Loading/> : ""}
+        {spinner ? <Loading/> : EMPTY_STRING}
         <CounterResults
           searchText={search}
           totalResults={totalResults}
         />
         <Films films={films}/>
         <Paginator
+          search={search}
           totalResults={totalResults}
           changePage={changePage}
         />

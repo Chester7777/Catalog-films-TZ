@@ -1,15 +1,16 @@
-import placeholder from '../../asseds/images/placeholder.png';
+import placeholder from 'src/asseds/images/placeholder.png';
 import {FC, memo, ReactElement} from 'react';
 import s from './styles/films.module.scss';
 import {FilmsType} from './types';
+import {POSTER, POSTER_EMTY} from 'src/constants';
 
-export const Films: FC<FilmsType> = ({films}: FilmsType): ReactElement | null => (
+export const Films: FC<FilmsType> = memo(({films}: FilmsType): ReactElement | null => (
     <div className={s.container_films}>
       {(films && films.length > 0) && (
-        films.map((film) => <div className={s.container_film} key={film.imdbID}>
+        films.map((film, index) => <div className={s.container_film} key={film.imdbID + index}>
             <img
-              alt="poster"
-              src={film.Poster === "N/A" ? placeholder : film.Poster}
+              alt={POSTER}
+              src={film.Poster === POSTER_EMTY ? placeholder : film.Poster}
             />
             <div className={s.container_text}>
               <div>
@@ -41,3 +42,4 @@ export const Films: FC<FilmsType> = ({films}: FilmsType): ReactElement | null =>
         ))}
     </div>
   )
+)
