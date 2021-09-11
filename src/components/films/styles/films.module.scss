@@ -1,6 +1,7 @@
 .container_films {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   align-content: space-around;
   height: 100%;
   padding: 0;
@@ -12,10 +13,10 @@
 
   .container_film {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    width: 30%;
+    width: 25%;
     padding-bottom: 20px;
     @media (max-width: 420px) {
       width: 100%;
@@ -33,7 +34,7 @@
     }
 
     .container_text {
-      width: 50%;
+      width: 45%;
       background: #badaed;
       opacity: .6;
       padding: 10px;
