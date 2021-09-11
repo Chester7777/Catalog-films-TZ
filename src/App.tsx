@@ -5,6 +5,8 @@ import axios from 'axios';
 import {CounterResults, DropDownMenu, Films, Loading, Paginator} from './components';
 import {FilmType, GetDataType} from './types';
 
+// const EMPTY_STRING = "";
+
 export const App: FC = memo((): ReactElement | null => {
   const [error, setError] = useState<string>("");
   const [search, setSearch] = useState<string>("");
@@ -15,6 +17,7 @@ export const App: FC = memo((): ReactElement | null => {
 
   const changePage = (page: number): Promise<void> => fetchMovies(search, page);
 
+  // useCallback [searchText, currentPage, fetchMovies]
   const getMove = (searchText: string): void => {
     setSearch(searchText);
 
@@ -38,6 +41,7 @@ export const App: FC = memo((): ReactElement | null => {
         setFilms(Search);
         setTotalResults(totalResults);
         setCurrentPage(currentPage);
+        setError('');
       } else {
         setError(`Error in request : ${Error}`);
       }

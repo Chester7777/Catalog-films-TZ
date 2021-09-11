@@ -26,10 +26,11 @@ class Search extends React.Component<IsearchProps, IsearchState> {
     this.props.handleKeyUp(name);
   }
 
-
   doSearch(event: ChangeEvent<HTMLInputElement>) {
     this.setState({searchText: event.target.value});
+
     if (this.timeout) clearTimeout(this.timeout);
+
     this.timeout = setTimeout(() => {
       this.sendToParent(this.state.searchText);
     }, 1600);

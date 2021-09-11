@@ -1,10 +1,10 @@
 import {ChangeEvent, FC, memo, ReactElement, useState} from 'react';
 import s from './styles/dropDownMenu.module.scss';
-import user from '../../asseds/images/icons-user.svg';
-import logout from '../../asseds/images/icons-logout.svg';
-import password from '../../asseds/images/icons-change-password.svg';
+import user from 'src/asseds/images/icons-user.svg';
+import logout from 'src/asseds/images/icons-logout.svg';
+import password from 'src/asseds/images/icons-change-password.svg';
 
-export const DropDownMenu: FC = (): ReactElement | null => {
+export const DropDownMenu: FC = memo((): ReactElement | null => {
     const arrayString = ["Vasilina Kazachonak", "Logout", "Change password"];
 
     const [options, setOptions] = useState<Array<string>>(arrayString);
@@ -26,15 +26,15 @@ export const DropDownMenu: FC = (): ReactElement | null => {
         />
         <select className={s.select} onChange={currentValue}>
           {
-            options.map(option => {
+            options.map(option => (
                 <option className={s.select} key={option}>
                   {option}
                 </option>
-              }
+              )
             )
           }
         </select>
       </div>
     )
   }
-
+)

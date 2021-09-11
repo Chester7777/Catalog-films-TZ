@@ -3,10 +3,12 @@ import {ENTER_MOVIE_TITLE} from 'src/constants';
 import {CounterResultsType} from './types';
 import {FC, memo, ReactElement} from 'react';
 
+// const qweqwe = `You searched for: ${searchText} - ${totalResults} results found`
+
 export const CounterResults: FC<CounterResultsType> = ({
-                                                         searchText,
-                                                         totalResults
-                                                       }: CounterResultsType
+  searchText,
+  totalResults
+}: CounterResultsType
 ): ReactElement | null => (
   <div className={s.results}>
     {
