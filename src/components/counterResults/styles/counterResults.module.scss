@@ -1,0 +1,12 @@
+.results {
+  display: flex;
+  justify-content: flex-start;
+  padding: 60px 10%;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 3px 4px 3px #37b1f3;
+  @media (max-width: 640px) {
+    padding: 80px;
+    margin: 0 auto;
+  }
+}

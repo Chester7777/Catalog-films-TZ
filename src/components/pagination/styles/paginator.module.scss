@@ -1,0 +1,44 @@
+.paginator {
+  margin: 10px;
+  @media (max-width: 420px) {
+    margin: 0 auto;
+  }
+
+  .pageNumber, button {
+    padding: 8px 12px;
+    margin: 3px;
+    border: 1px solid gray;
+    border-radius: 2px;
+    background: #badaed;
+    opacity: .6;
+    cursor: pointer;
+    @media (max-width: 640px) {
+      padding: 2px 3px;
+      margin: 1px auto;
+    }
+  }
+
+  button {
+    padding: 5px 10px !important;
+    background-color: azure;
+    color: #37b1f3;
+    @media (max-width: 400px) {
+      padding: 0;
+    }
+  }
+
+  .selectedPage {
+    font-weight: bold;
+    border: 1px solid blue;
+    background-color: #badaed;
+    opacity: 1;
+    color: blue;
+  }
+}
+
+.paginator :hover {
+  opacity: 1;
+  font-weight: bold;
+  border: 2px solid blue;
+  transform: scale(1.2);
+}

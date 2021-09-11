@@ -1,0 +1,79 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  background: url(asseds/images/background-body-films.jpg) no-repeat fixed;
+  background-size: cover;
+}
+
+.flex {
+  display: flex;
+}
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+  display: flex;
+  justify-content: stretch;
+  @media (max-width: 420px) {
+    flex-direction: column;
+  }
+}
+
+.col {
+  padding-left: 15px;
+  padding-right: 15px;
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  background: #badaed;
+  padding: 8px 0;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+input[type="text"] {
+  height: 32px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+.search-box {
+  position: relative;
+
+  button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 32px;
+    width: 32px;
+    background: transparent;
+    border: 1px solid transparent;
+    outline: none;
+    cursor: pointer;
+    color: #ccc;
+  }
+}
