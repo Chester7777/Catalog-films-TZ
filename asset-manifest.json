@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/catalog-films-TZ/static/css/main.8c24c317.chunk.css",
+    "main.css": "/catalog-films-TZ/static/css/main.b05a3cdd.chunk.css",
     "main.js": "/catalog-films-TZ/static/js/main.7c716a6f.chunk.js",
     "main.js.map": "/catalog-films-TZ/static/js/main.7c716a6f.chunk.js.map",
     "runtime-main.js": "/catalog-films-TZ/static/js/runtime-main.78e1effc.js",
@@ -10,7 +10,7 @@
     "static/js/3.dd96cda3.chunk.js": "/catalog-films-TZ/static/js/3.dd96cda3.chunk.js",
     "static/js/3.dd96cda3.chunk.js.map": "/catalog-films-TZ/static/js/3.dd96cda3.chunk.js.map",
     "index.html": "/catalog-films-TZ/index.html",
-    "static/css/main.8c24c317.chunk.css.map": "/catalog-films-TZ/static/css/main.8c24c317.chunk.css.map",
+    "static/css/main.b05a3cdd.chunk.css.map": "/catalog-films-TZ/static/css/main.b05a3cdd.chunk.css.map",
     "static/js/2.737e8293.chunk.js.LICENSE.txt": "/catalog-films-TZ/static/js/2.737e8293.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/catalog-films-TZ/static/media/background-body-films.0e6ba18e.jpg",
     "static/media/icons-change-password.05ec1805.svg": "/catalog-films-TZ/static/media/icons-change-password.05ec1805.svg",
@@ -21,7 +21,7 @@
   "entrypoints": [
     "static/js/runtime-main.78e1effc.js",
     "static/js/2.737e8293.chunk.js",
-    "static/css/main.8c24c317.chunk.css",
+    "static/css/main.b05a3cdd.chunk.css",
     "static/js/main.7c716a6f.chunk.js"
   ]
 }
